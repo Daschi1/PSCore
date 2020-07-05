@@ -18,10 +18,17 @@ repositories {
         name = 'sonatype'
         url = 'https://oss.sonatype.org/content/groups/public/'
     }
+    maven {
+        url = 'https://jitpack.io'
+    }
 }
 
 dependencies {
-    compileOnly 'com.destroystokyo.paper:paper-api:1.16.1-R0.1-SNAPSHOT'
+    compileOnly group: 'com.destroystokyo.paper', name: 'paper-api', version: '1.16.1-R0.1-SNAPSHOT'
+
+    implementation group: 'org.jetbrains', name: 'annotations', version: '19.0.0'
+
+    implementation group: 'com.github.Carleslc', name: 'Simple-YAML', version: '1.6.1'
 }
 
 processResources {
