@@ -1,7 +1,9 @@
 package de.daschi.pscore;
 
 import de.daschi.pscore.config.CoreConfig;
+import de.daschi.pscore.mysql.CoreMySQL;
 import org.bukkit.plugin.java.JavaPlugin;
+import org.simpleyaml.exceptions.InvalidConfigurationException;
 
 import java.io.IOException;
 
@@ -20,12 +22,15 @@ public final class PSCore extends JavaPlugin {
     @Override
     public void onLoad() {
         super.onLoad();
+        PSCore.javaPlugin = this;
 
         try {
-            CoreConfig.initialise();
-        } catch (final IOException e) {
+            CoreConfig.loadConfig();
+        } catch (final IOException | InvalidConfigurationException e) {
             e.printStackTrace();
         }
+
+        CoreMySQL.loadMySQL();
     }
 
     @Override

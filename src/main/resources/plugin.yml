@@ -4,4 +4,4 @@ main: de.daschi.pscore.PSCore
 api-version: 1.16
 load: STARTUP
 authors: [Daschi]
-description: A core for PaperSpigot @version@ plugins.
+description: A core for PaperSpigot plugins.

@@ -23,7 +23,7 @@ settings:
   bungeecord: false
   timeout-time: 60
   restart-on-crash: true
-  restart-script: ./start.sh
+  restart-script: start.bat
   netty-threads: 4
   attribute:
     maxHealth:
