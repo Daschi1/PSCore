@@ -1,4 +1,3 @@
 package de.daschi.pscore.ps;
 
-public class PSListener {
-}
+public class PSListener {}
